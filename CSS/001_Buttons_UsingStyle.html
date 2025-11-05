@@ -1,0 +1,65 @@
+<!--
+    There are 3 ways to use css
+
+    1. Internal CSS(inside <style> tag in HTML)
+    2. External CSS file
+    3. Inline CSS (using style attribute)
+
+    NOTE: InInternal or external CSS we use /**/ for comments
+-->
+<!-- style is a html attribute-->
+
+ <!--  1. INLINE-->
+
+<h1 style="color: blue;",>Hello</h1>
+
+<!-- 2. INTERNAL -->
+
+<!--
+      Technique: 1. Create element with HTML
+                 2. Style with CSS one-by-one
+-->
+<style>
+  button { /*For all buttons on this page*/
+    background-color: red; /*TO adjust background color*/
+
+    color: white; /*To adjust text color*/
+    /*or instead of white use: rgb(255, 255, 255)*/
+    /* we can use rgb(red value, green value, blue value) as well for colors in css
+      minimum value : 0
+      maximum value: 255
+      */
+    border: none; /*To make the button borderless*/
+
+    /*To adjust height and width*/
+    height: 36px;
+    width: 105px;
+
+    /*To adjust border radius : takes pixels measurement
+                                higher the pixels, more round the corners*/
+
+    border-radius: 100px;
+
+    /*To change cursor when pointed on the button*/
+   
+    cursor: pointer;
+  }
+</style>
+
+<!-- CSS SLELCTOR 
+        we selected button , means every button would have background
+        color red and text color white and would be borderless
+
+        CSS Property : background-color, color, border, height, etc.
+        CSS Value : red, white, etc.
+
+        In CSS we end a style with a semicolon ;
+-->
+
+<button>SUBSCRIBE</button> <!--It's background would be red in color
+                                and text would be white in color
+                                and button woul dbe borderless-->
+
+<!-- Creating another button-->
+
+<button>JOIN</button> <!--Unfortunately this button has also the same attributes as the above one-->

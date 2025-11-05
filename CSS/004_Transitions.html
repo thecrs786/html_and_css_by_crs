@@ -1,0 +1,101 @@
+<style>
+
+/*Transition is a style property that takes two values separated by a space
+    1. transition to what
+    2. transition time*/
+    .subscribe-button{ 
+        background-color: rgb(200, 0, 0);
+        color: white;
+        border: none;
+        height: 36px;
+        width: 105px;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-right: 8px;
+        /*setting transition to opacity while hovering*/
+        transition: opacity 1s; /*1 second*/
+    }
+
+
+    .subscribe-button:hover { 
+        opacity: 0.5; 
+
+    }
+
+    .subscribe-button:active{ 
+        background-color: blue;
+        opacity: 1; 
+    }
+
+    .join-button{
+        background-color: white;
+        color: rgb(41, 118, 211);
+        border-color: rgb(41, 118, 211);
+        border-style: solid; 
+        border-width: 1px;
+        border-radius: 2px;
+        cursor: pointer;
+        height: 36px;
+        width: 62px;
+        /*Adding transition for background color*/
+        transition: background-color 1s, /*Normal to hover*/
+        /*Adding transition for text color*/
+                     color 1s;
+
+        /*Multiple transitions for an element can be separated by a comma*/
+        
+        }
+
+        /*NOTE: We should apply transition only in normal state so that the transition works both ways
+                in hover and out hover but if transition exists only in :hover, it animates while going into hover,
+but             not while going out of hover.*/
+
+    .join-button:hover{
+        background-color: rgb(41, 118, 211);
+        color: white;
+        transition: background-color 1s, color 1s; /*if no transition in normal state, then only 
+                                                    hover would be smooth and hover out would be instant*/
+       
+    }
+
+    .join-button:active{
+        opacity:0.5;
+    }
+</style>
+
+<button class="subscribe-button">SUBSCRIBE</button>
+<button class="join-button">JOIN</button>
+
+<!--
+================ HOVER TRANSITION RULES =================
+
+1. Transition in NORMAL state only:
+   - Animates whenever the element's properties change to or from this state.
+   - Hover-in: smooth
+   - Hover-out: smooth
+   - Result: TWO-WAY animation by default.
+
+2. Transition in HOVER state only:
+   - Animates only while :hover is active.
+   - Hover-in: smooth
+   - Hover-out: instant (no animation)
+   - Result: ONE-WAY animation (hover-in only).
+
+3. Transition in BOTH NORMAL and HOVER states:
+   - Animates in both directions.
+   - Hover-in: smooth
+   - Hover-out: smooth
+   - Result: same as normal-only, redundant.
+
+4. Only HOVER-OUT animation:
+   - Trick: put transition in normal state and disable it in hover using `transition: none;`
+   - Hover-in: instant
+   - Hover-out: smooth
+   - Result: ONE-WAY animation (hover-out only).
+
+========================================================
+Remember: 'transition' applies only when the selector containing it is active.
+Normal state transition = applies when returning or any change toward normal.
+Hover state transition = applies when entering hover state.
+-->
+

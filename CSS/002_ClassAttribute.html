@@ -1,0 +1,62 @@
+<!-- Targeting specefic buttons only
+        ->we use class
+        starting with a dot '.'
+        -->
+
+<!--
+    NOTE: 1.In CSS space is called margin   
+          2. To get perfectly rounded corners, set the border-radius to half of the minimum of the height and width   
+-->
+
+<style>
+
+    /*For subscribe button*/
+    .subscribe-button{ /* started with a dot '.' and enter class name to target it*/
+        background-color: rgb(200, 0, 0);
+        color: white;
+        border: none;
+        height: 36px;
+        width: 105px;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-right: 8px; /*Created space on the right of this button*/
+    }
+
+    /*For join button*/
+    .join-button{
+        background-color: white;
+        color: rgb(41, 118, 211);
+        border-color: rgb(41, 118, 211); /*For background color*/
+        border-style: solid; /*For border style*/
+        border-width: 1px;
+        border-radius: 2px;
+        cursor: pointer;
+        height: 36px;
+        width: 62px;
+        /* margin-right: 8px; we'll use left margin on tweet button*/
+    }
+
+    /*For Tweet Button*/
+    .tweet-button{
+        background-color: rgb(2, 158, 255);
+        color: white;
+        border: none;
+        height: 36px;
+        width: 70px;
+        border-radius: 18px;
+        font-weight: bold; /*Bolded the font*/
+        font-size: 15px; /*Adjusted font size*/
+        cursor: pointer;
+        margin-left: 8px;
+        
+    
+
+    }
+
+</style>
+
+<button class="subscribe-button">SUBSCRIBE</button> <!--Derived only class attributes-->
+
+<button class="join-button">JOIN</button>
+
+<button class="tweet-button">Tweet</button>
