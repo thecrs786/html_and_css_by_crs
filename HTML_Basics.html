@@ -1,0 +1,243 @@
+<!-- 
+===========================================================
+                HTML ELEMENTS REFERENCE TABLE
+===========================================================
+
+| Element / Tag        | Purpose / Description                               | Common Attributes (Example)                         |
+|----------------------|-----------------------------------------------------|-----------------------------------------------------|
+| <!DOCTYPE html>      | Declares HTML version (HTML5)                       | —                                                   |
+| <html>               | Root element of the document                        | lang="en"                                           |
+| <head>               | Metadata, title, links, scripts (not visible)       | —                                                   |
+| <title>              | Title shown in browser tab                          | —                                                   |
+| <body>               | Main visible content of the page                    | —                                                   |
+| <p>                  | Paragraph of text                                   | —                                                   |
+| <h1> to <h6>         | Headings (h1 = biggest, h6 = smallest)              | —                                                   |
+| <a>                  | Hyperlink to another page/section                   | href, target, rel, download                         |
+| <img>                | Displays an image                                   | src, alt, width, height, loading                    |
+| <button>             | Clickable button                                    | type, disabled                                      |
+| <div>                | Block-level container (layout/grouping)             | id, class                                           |
+| <span>               | Inline container (styling text inline)              | id, class                                           |
+| <br>                 | Line break (self-closing)                           | —                                                   |
+| <hr>                 | Horizontal divider line                             | —                                                   |
+| <ul>                 | Unordered list (bullets)                            | —                                                   |
+| <ol>                 | Ordered list (numbers)                              | type="A" | "a" | "I"                                |
+| <li>                 | List item                                           | —                                                   |
+| <table>              | Table container                                     | border, width (CSS recommended instead)             |
+| <tr>                 | Table row                                           | —                                                   |
+| <th>                 | Table header cell (bold + centered by default)      | colspan, rowspan                                    |
+| <td>                 | Table data cell                                     | colspan, rowspan                                    |
+| <form>               | Collects input data for submission                  | method, action, autocomplete                        |
+| <input>              | User input field                                    | type, name, value, placeholder, required            |
+| <label>              | Text label for inputs                               | for                                                |
+| <textarea>           | Multiline input field                               | rows, cols, placeholder                             |
+| <select>             | Dropdown menu                                       | name, multiple                                      |
+| <option>             | Option inside select                                | value, selected                                     |
+| <header>             | Top section (logo, nav, title)                      | —                                                   |
+| <nav>                | Navigation section (menu links)                     | —                                                   |
+| <section>            | Groups related content                              | —                                                   |
+| <article>            | Independent content (blog post, card, etc.)         | —                                                   |
+| <aside>              | Sidebar / extra info                                | —                                                   |
+| <footer>             | Bottom section (credits, copyright)                 | —                                                   |
+| <iframe>             | Embeds external webpage/video/map                   | src, width, height, allowfullscreen                 |
+| <video>              | Video player                                        | src, controls, autoplay, loop, muted                |
+| <audio>              | Audio player                                        | src, controls, loop, autoplay                       |
+| <link>               | Links external resources (like CSS)                 | rel="stylesheet", href                              |
+| <meta>               | Metadata (charset, viewport)                        | charset, name, content                              |
+| <script>             | Adds JavaScript code                                | src, defer                                          |
+
+===========================================================
+-->
+
+
+
+<!-- =======================================================
+   1. BASIC STRUCTURE OF AN HTML DOCUMENT
+========================================================-->
+
+<!-- ALWAYS START WITH THIS BASE STRUCTURE -->
+<!DOCTYPE html> <!-- Declares HTML5 - must be first -->
+<html lang="en"> <!-- Root element, "lang" helps SEO & accessibility -->
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <title>HTML Notes Example</title> <!-- Title in browser tab -->
+</head>
+<body>
+
+<!-- Visible content starts here -->
+
+<h1>HTML Notes Example</h1>
+<p>This is an example HTML file for learning purposes.</p>
+
+<!-- =======================================================
+   2. TEXT & FORMATTING ELEMENTS
+========================================================-->
+
+<!-- <p> : Paragraph -->
+<p>This is a normal paragraph of text.</p>
+
+<!-- <strong> : Bold text with importance -->
+<p>This is <strong>important text</strong>.</p>
+
+<!-- <em> : Italic emphasis -->
+<p>This is <em>emphasized text</em>.</p>
+
+<!-- <b> and <i> exist, but <strong> and <em> are preferred for accessibility -->
+
+<!-- Line break example -->
+First line <br> Second line (br forces next line)
+
+<!-- =======================================================
+   3. LINKS / ANCHOR TAG
+========================================================-->
+
+<!-- <a> tag with attributes -->
+<a href="https://www.google.com">Normal Link</a> <br>
+
+<!-- target="_blank" opens in new tab -->
+<a href="https://youtube.com" target="_blank">Open YouTube in new tab</a> <br>
+
+<!-- rel="noopener" is recommended for security when using _blank -->
+<a href="https://example.com" target="_blank" rel="noopener">Safe External Link</a> <br>
+
+<!-- download attribute forces download instead of opening -->
+<a href="file.pdf" download>Download PDF</a>
+
+<!-- IMPORTANT NOTE:
+- href attribute defines the link destination
+- target="_blank" opens link in a new tab
+- rel="noopener" prevents security issues (MUST use with _blank)
+-->
+
+<!-- =======================================================
+   4. IMAGES & MEDIA
+========================================================-->
+
+<!-- Basic image -->
+<img src="image.png" alt="Image description">
+
+<!-- With width/height (not recommended in % unless responsive) -->
+<img src="cat.jpg" alt="Cute cat" width="200">
+
+<!-- Lazy loading (improves performance) -->
+<img src="big-image.jpg" alt="Large Image" loading="lazy">
+
+<!-- VIDEO TAG -->
+<video src="video.mp4" controls width="400"></video>
+
+<!-- AUDIO TAG -->
+<audio src="music.mp3" controls></audio>
+
+<!-- IFRAME EXAMPLE (YOUTUBE EMBED) -->
+<iframe width="400" height="225" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+
+<!-- =======================================================
+   5. LISTS (ul, ol, li)
+========================================================-->
+
+<!-- Unordered list -->
+<ul>
+    <li>Mango</li>
+    <li>Apple</li>
+    <li>Banana</li>
+</ul>
+
+<!-- Ordered list -->
+<ol>
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+</ol>
+
+<!-- Nested list -->
+<ul>
+    <li>Frontend
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+    </li>
+</ul>
+
+<!-- =======================================================
+   6. TABLES
+========================================================-->
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Alice</td>
+        <td>21</td>
+    </tr>
+</table>
+
+<!-- colspan merges columns -->
+<!-- rowspan merges rows -->
+
+<!-- =======================================================
+   7. FORMS & INPUTS (BASIC ONLY)
+========================================================-->
+
+<form action="/submit" method="POST">
+    <label for="name">Enter Name:</label>
+    <input type="text" id="name" placeholder="Your name" required><br>
+
+    <input type="submit" value="Submit Form">
+</form>
+
+<!-- IMPORTANT FORM NOTES:
+- method="GET" (default) shows data in URL
+- method="POST" hides data (more secure)
+- required attribute forces user to fill field
+-->
+
+<!-- =======================================================
+   8. BUTTONS
+========================================================-->
+
+<!-- Normal button -->
+<button>Click me</button>
+
+<!-- Button types -->
+<button type="button">Normal Button</button>
+<button type="submit">Submit Button</button>
+<button type="reset">Reset Form</button>
+
+<!-- =======================================================
+   9. SEMANTIC HTML TAGS
+========================================================-->
+
+<header>Page Header (logo/title/nav)</header>
+<nav>Navigation area</nav>
+<section>Page Section</section>
+<article>Independent content block</article>
+<aside>Sidebar info</aside>
+<footer>Footer information</footer>
+
+<!-- =======================================================
+   10. IMPORTANT NOTES & RULES
+========================================================-->
+
+<!-- SPACING RULE:
+Extra spaces and newlines in HTML are collapsed into ONE space -->
+
+<p>This      text     still     shows   as   one   spaced   line.</p>
+
+<!-- To force spacing, CSS or &nbsp; entity is needed -->
+
+<!-- Self-closing tags in HTML:
+<br> <hr> <img> <input> <meta> <link>
+-->
+
+<!-- Global attributes (work on MOST elements):
+id, class, style, title, hidden, draggable
+-->
+
+<!-- =======================================================
+ END OF NOTES
+========================================================-->
+
+</body>
+</html>
