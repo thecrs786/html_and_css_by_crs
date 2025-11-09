@@ -1,0 +1,38 @@
+    <Style>
+
+    .join-button{
+        background-color: white;
+        color: rgb(41, 118, 211);
+        border-color: rgb(41, 118, 211);
+        border-style: solid; 
+        border-width: 1px;
+        border-radius: 2px;
+        cursor: pointer;
+        /*height: 36px; if we comment out these two lines, the button size will arrange itself
+        width: 62px;    according to the text length */
+        transition: background-color 1s,
+        color 1s;
+        /* Padding adds space inside the button*/
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+
+        /* padding: 20px; # sets padding to all 4 sides*/
+       }
+
+    .join-button:hover{
+        background-color: rgb(41, 118, 211);
+        color: white;
+        transition: background-color 1s, color 1s; 
+    }
+
+    .join-button:active{
+        opacity:0.5;
+    }
+
+    </Style>
+
+<!-- If we fix the box length and width, this leads to overflow of the text outside the box whenever the content exceeds the size -->
+
+<button class="join-button">JOIN MY CHANNEL</button>
