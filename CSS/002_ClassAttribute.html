@@ -1,66 +1,106 @@
-    <!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 
         Targeting specific buttons using CLASS SELECTORS
         - Classes are defined in CSS with a dot (.)
         - Each button below has a unique class
     -->
-    <style>
-        /* NOTE:
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Attributes</title>
+  <style>
+    /* NOTE:
            1. In CSS, space outside the element is called 'margin'.
            2. For perfectly rounded corners, set border-radius to half of the smaller of height or width.
         */
 
-        /* ==============================
+    /* ==============================
            SUBSCRIBE BUTTON
            ============================== */
-        .subscribe-button {
-            background-color: rgb(200, 0, 0); /* Red background */
-            color: white;                     /* White text */
-            border: none;                     /* No border */
-            height: 36px;                     /* Fixed height */
-            width: 105px;                     /* Fixed width */
-            border-radius: 2px;               /* Slightly rounded corners */
-            cursor: pointer;                  /* Pointer cursor on hover */
-            margin-right: 8px;                /* Space to the right */
-        }
+    .subscribe-button {
+      background-color: rgb(200, 0, 0);
+      /* Red background */
+      color: white;
+      /* White text */
+      border: none;
+      /* No border */
+      height: 36px;
+      /* Fixed height */
+      width: 105px;
+      /* Fixed width */
+      border-radius: 2px;
+      /* Slightly rounded corners */
+      cursor: pointer;
+      /* Pointer cursor on hover */
+      margin-right: 8px;
+      /* Space to the right */
+    }
 
-        /* ==============================
+    /* ==============================
            JOIN BUTTON
            ============================== */
-        .join-button {
-            background-color: white;                  /* White background */
-            color: rgb(41, 118, 211);                 /* Blue text */
-            border-color: rgb(41, 118, 211);          /* Blue border */
-            border-style: solid;                      /* Solid border line */
-            border-width: 1px;                        /* Thin border */
-            border-radius: 2px;                       /* Slightly rounded edges */
-            cursor: pointer;                          /* Pointer cursor */
-            height: 36px;                             /* Fixed height */
-            width: 62px;                              /* Fixed width */
-            /* margin-right: 8px;  (optional) */
-        }
+    .join-button {
+      background-color: white;
+      /* White background */
+      color: rgb(41, 118, 211);
+      /* Blue text */
+      border-color: rgb(41, 118, 211);
+      /* Blue border */
+      border-style: solid;
+      /* Solid border line */
+      border-width: 1px;
+      /* Thin border */
+      border-radius: 2px;
+      /* Slightly rounded edges */
+      cursor: pointer;
+      /* Pointer cursor */
+      height: 36px;
+      /* Fixed height */
+      width: 62px;
+      /* Fixed width */
+      /* margin-right: 8px;  (optional) */
+    }
 
-        /* ==============================
+    /* ==============================
            TWEET BUTTON
            ============================== */
-        .tweet-button {
-            background-color: rgb(2, 158, 255); /* Bright blue background */
-            color: white;                        /* White text */
-            border: none;                        /* No border */
-            height: 36px;                        /* Fixed height */
-            width: 70px;                         /* Fixed width */
-            border-radius: 18px;                 /* Rounded shape (half of height) */
-            font-weight: bold;                   /* Bold text */
-            font-size: 15px;                     /* Medium font size */
-            cursor: pointer;                     /* Pointer cursor */
-            margin-left: 8px;                    /* Space on the left */
-        }
-    </style>
+    .tweet-button {
+      background-color: rgb(2, 158, 255);
+      /* Bright blue background */
+      color: white;
+      /* White text */
+      border: none;
+      /* No border */
+      height: 36px;
+      /* Fixed height */
+      width: 70px;
+      /* Fixed width */
+      border-radius: 18px;
+      /* Rounded shape (half of height) */
+      font-weight: bold;
+      /* Bold text */
+      font-size: 15px;
+      /* Medium font size */
+      cursor: pointer;
+      /* Pointer cursor */
+      margin-left: 8px;
+      /* Space on the left */
+    }
+  </style>
+</head>
 
-    <!-- 
+<body>
+
+  <!-- 
         Each button below uses its respective class defined in CSS.
         These class names allow each button to have a unique style.
     -->
-    <button class="subscribe-button">SUBSCRIBE</button>
-    <button class="join-button">JOIN</button>
-    <button class="tweet-button">Tweet</button>
+  <button class="subscribe-button">SUBSCRIBE</button>
+  <button class="join-button">JOIN</button>
+  <button class="tweet-button">Tweet</button>
 
+</body>
+
+</html>

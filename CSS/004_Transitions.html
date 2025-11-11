@@ -1,4 +1,8 @@
-<!-- =====================================================
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- =====================================================
      ✨ CSS TRANSITIONS — COMPLETE EXPLANATION & DEMO ✨
      =====================================================
 
@@ -8,9 +12,10 @@ It covers:
 2. Difference between hover-in / hover-out transitions
 3. How transitions behave when applied in normal, hover, or both states.
 -->
-
-<style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transitions</title>
+  <style>
     /* =====================================================
        TRANSITION FUNDAMENTALS
        =====================================================
@@ -28,37 +33,48 @@ It covers:
     /* ==========================
        SUBSCRIBE BUTTON STYLING
        ========================== */
-    .subscribe-button { 
-        background-color: rgb(200, 0, 0);  /* Red background */
-        color: white;                      /* White text */
-        border: none;                      /* No border */
-        height: 36px;                      /* Fixed height */
-        width: 105px;                      /* Fixed width */
-        border-radius: 2px;                /* Slightly rounded corners */
-        cursor: pointer;                   /* Pointer cursor on hover */
-        margin-right: 8px;                 /* Gap from next button */
+    .subscribe-button {
+      background-color: rgb(200, 0, 0);
+      /* Red background */
+      color: white;
+      /* White text */
+      border: none;
+      /* No border */
+      height: 36px;
+      /* Fixed height */
+      width: 105px;
+      /* Fixed width */
+      border-radius: 2px;
+      /* Slightly rounded corners */
+      cursor: pointer;
+      /* Pointer cursor on hover */
+      margin-right: 8px;
+      /* Gap from next button */
 
-        /* =====================================================
+      /* =====================================================
            TRANSITION PROPERTY:
            - Applying transition on the NORMAL state.
            - Affects opacity changes with a 1-second animation.
            ===================================================== */
-        transition: opacity 1s; 
+      transition: opacity 1s;
     }
 
     /* ==========================
        SUBSCRIBE HOVER STATE
        ========================== */
-    .subscribe-button:hover { 
-        opacity: 0.5;   /* Fades to half opacity smoothly due to transition */
+    .subscribe-button:hover {
+      opacity: 0.5;
+      /* Fades to half opacity smoothly due to transition */
     }
 
     /* ==========================
        SUBSCRIBE ACTIVE STATE
        ========================== */
-    .subscribe-button:active { 
-        background-color: blue;  /* Temporary blue background while clicked */
-        opacity: 1;              /* Full opacity when pressed */
+    .subscribe-button:active {
+      background-color: blue;
+      /* Temporary blue background while clicked */
+      opacity: 1;
+      /* Full opacity when pressed */
     }
 
 
@@ -66,22 +82,31 @@ It covers:
        JOIN BUTTON STYLING
        ========================== */
     .join-button {
-        background-color: white;                /* White background */
-        color: rgb(41, 118, 211);               /* Blue text */
-        border-color: rgb(41, 118, 211);        /* Blue border */
-        border-style: solid;                    /* Solid border */
-        border-width: 1px;                      /* Thin border */
-        border-radius: 2px;                     /* Rounded edges */
-        cursor: pointer;                        /* Pointer cursor */
-        height: 36px;                           /* Fixed height */
-        width: 62px;                            /* Fixed width */
+      background-color: white;
+      /* White background */
+      color: rgb(41, 118, 211);
+      /* Blue text */
+      border-color: rgb(41, 118, 211);
+      /* Blue border */
+      border-style: solid;
+      /* Solid border */
+      border-width: 1px;
+      /* Thin border */
+      border-radius: 2px;
+      /* Rounded edges */
+      cursor: pointer;
+      /* Pointer cursor */
+      height: 36px;
+      /* Fixed height */
+      width: 62px;
+      /* Fixed width */
 
-        /* =====================================================
+      /* =====================================================
            MULTIPLE TRANSITIONS:
            - You can apply multiple transitions using commas.
            - This animates background-color and text color changes.
            ===================================================== */
-        transition: background-color 1s, color 1s;
+      transition: background-color 1s, color 1s;
     }
 
     /* =====================================================
@@ -108,34 +133,38 @@ It covers:
        JOIN HOVER STATE
        ========================== */
     .join-button:hover {
-        background-color: rgb(41, 118, 211);    /* Blue background on hover */
-        color: white;                           /* White text on hover */
+      background-color: rgb(41, 118, 211);
+      /* Blue background on hover */
+      color: white;
+      /* White text on hover */
 
-        /* Adding transition here again just to demonstrate redundancy:
+      /* Adding transition here again just to demonstrate redundancy:
            - Works same as applying only in normal state.
            - If transition wasn't in normal state, hover-out would be instant.
         */
-        transition: background-color 1s, color 1s; 
+      transition: background-color 1s, color 1s;
     }
 
     /* ==========================
        JOIN ACTIVE STATE
        ========================== */
     .join-button:active {
-        opacity: 0.5;   /* Slight fade when clicked */
+      opacity: 0.5;
+      /* Slight fade when clicked */
     }
+  </style>
+</head>
 
-</style>
+<body>
 
-
-<!-- =====================================================
+  <!-- =====================================================
      BUTTONS ON PAGE
      ===================================================== -->
-<button class="subscribe-button">SUBSCRIBE</button>
-<button class="join-button">JOIN</button>
+  <button class="subscribe-button">SUBSCRIBE</button>
+  <button class="join-button">JOIN</button>
 
 
-<!-- =====================================================
+  <!-- =====================================================
      🎯 TRANSITION BEHAVIOR SUMMARY
      =====================================================
 
@@ -166,3 +195,6 @@ It covers:
 
 =========================================================
 -->
+</body>
+
+</html>

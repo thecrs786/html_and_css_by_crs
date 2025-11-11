@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+/* ====================== STYLE SECTION IN A SEPARATE CSS FILE ====================== */
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Text Styles</title>
-  <!-- ====================== STYLE SECTION ====================== -->
-  <style>
     /* ============================================================
    1️⃣ GLOBAL ELEMENT STYLING
    ------------------------------------------------------------
@@ -105,14 +98,6 @@
 
     }
 
-    /*TEXT ELEMENTS : exists inside the line of text and modifies the specefic part of text only
-
-    ex: <strong></strong> : bolds the text
-        <u></u> : underlines the text
-        <span></span> : the most generic text element, it has no style. we can style it ourselves by giving it class.
-    
-    */
-
     .apple-text {
       margin-bottom: 50px;
       /*Overrides global margin*/
@@ -126,12 +111,6 @@
       padding-top: 18px;
       /*Creating space inside the paragraph borders and text*/
       padding-bottom: 18px;
-
-      /*CREATING UNDERLINED TEXT
-        text-decoration: underline; applies to whole paragraph
-                                    so, we used text element <span> while writing the paragraph
-                                    because: we want underline only on shop now part and only when we hover on*/
-
 
     }
 
@@ -148,72 +127,3 @@
       cursor: pointer;
       /*Cursor changes to pointer when hovered over the shop now part*/
     }
-
-    /*
-    IF WE WRITE THIS INSTEAD OF ABOVE TWO BLOCKS
-    .span-example {
-    text-decoration: underline;
-    cursor: pointer;
-    }
-    text-decoration: underline → will apply all the time (always underlined).
-
-    cursor: pointer → will still only show on hover, because that’s how browsers behave by default.
-    The cursor property means “use this cursor when hovered or interacting”, not “always display the cursor over everything.”
-    */
-  </style>
-
-</head>
-
-<body>
-
-  <!-- ====================== CONTENT SECTION ====================== -->
-
-  <!-- HTML ENTITY NOTE:
-     HTML Entities let us type special characters.
-     For middle dot:   &#183;   (HTML) or  \00B7   (CSS)
-     For checkmark:    &#10003; or &#x2713; or &check; (HTML)
--->
-
-  <p class="video-title">
-    Talking tech and AI with Google CEO Sundar Pichai!
-  </p>
-
-  <p class="video-stats">
-    3.4M views &#183; 6 months ago
-  </p>
-
-  <p class="video-author">
-    Marques Brownlee &check;
-  </p>
-
-  <p class="video-description">
-    Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal
-    from Google's CEO. Shoutout to Sundar!
-  </p>
-
-  <!-- ====================== EXPLANATION SUMMARY ======================
-   🔹 p{}         → Global element selector (base styling for all <p>)
-   🔹 .video-*    → Class selectors (specific overrides)
-   🔹 Shared rule → Combines identical properties across multiple classes
-   🔹 Priority order (lowest to highest):
-       1. Element selector (p)
-       2. Shared class selector (.video-stats, .video-author, .video-description)
-       3. Individual class selector (.video-title, etc.)
-
-    🟡 PRIORITY ORDER
-   - Inline style (if any) > Class style > Element (default browser) style
-   - Hover/Active states override normal class temporarily.
-   =============================================================== -->
-
-  <!--Whenever we have a greater than or less than sign, it's better to use an
-    HTML entity because it might be confused with html tag
-    
-    for greater than : &#62; -->
-  <p class="apple-text">
-    Shop early for the best selection of holiday
-    favourites. <span class="span-example">Shop now &#62;</span><!--Used underline element-->
-  </p>
-
-</body>
-
-</html>

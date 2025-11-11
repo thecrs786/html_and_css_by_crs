@@ -1,0 +1,60 @@
+<!-- This file contains the same content as in 008_TextStyles.html-->
+
+<!-- We use a separate css file to make the html file less confusing and heavy.
+    we create a .css file and  Then we use the link element to access it.
+    It makes the file smaller and more focused-->
+
+<!-- The Link element is a void element i.e it doesn't need a closing tag-->
+
+<!-- NOTE: Always place <link rel="stylesheet"> in the <head> section.
+That’s the correct, professional, and standard way — both for browser efficiency and clean HTML structure.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Styles</title>
+
+  <link rel="stylesheet" href="009.css">
+
+  <!-- Link element takes two attributes
+       1. rel : relation (what kind of thing are we liking in), we're linking a style sheet 
+       2. href : it selects the file. 
+         NOTE: we've just pasted the file name here because the css file and this html file
+               exists in the same folder, if they were in different folders, we would have to write the
+               proper address of the file as well-->
+
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+
+  <p class="video-title">
+    Talking tech and AI with Google CEO Sundar Pichai!
+  </p>
+
+  <p class="video-stats">
+    3.4M views &#183; 6 months ago
+  </p>
+
+  <p class="video-author">
+    Marques Brownlee &check;
+  </p>
+
+  <p class="video-description">
+    Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal
+    from Google's CEO. Shoutout to Sundar!
+  </p>
+
+  <p class="apple-text">
+    Shop early for the best selection of holiday
+    favourites. <span class="span-example">Shop now &#62;</span>
+  </p>
+
+</body>
+
+</html>

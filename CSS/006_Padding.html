@@ -1,28 +1,40 @@
-<!-- =======================================
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- =======================================
      BUTTON AUTO-SIZING & PADDING CONCEPTS
      ======================================= -->
-<!--
+  <!--
 This code shows how removing fixed height and width allows a button
 to resize dynamically based on its text content.
 It also explains how padding increases internal spacing
 and how transitions and pseudo-classes affect interaction.
 -->
-
-<style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padding</title>
+  <style>
     /* =======================
        JOIN BUTTON STYLING
        ======================= */
     .join-button {
-        background-color: white;                 /* Default background */
-        color: rgb(41, 118, 211);                /* Text color (blue tone) */
-        border-color: rgb(41, 118, 211);         /* Blue border color */
-        border-style: solid;                     /* Solid border line */
-        border-width: 1px;                       /* Thin border */
-        border-radius: 2px;                      /* Slightly rounded corners */
-        cursor: pointer;                         /* Pointer cursor on hover */
+      background-color: white;
+      /* Default background */
+      color: rgb(41, 118, 211);
+      /* Text color (blue tone) */
+      border-color: rgb(41, 118, 211);
+      /* Blue border color */
+      border-style: solid;
+      /* Solid border line */
+      border-width: 1px;
+      /* Thin border */
+      border-radius: 2px;
+      /* Slightly rounded corners */
+      cursor: pointer;
+      /* Pointer cursor on hover */
 
-        /* ==============================================
+      /* ==============================================
            HEIGHT & WIDTH NOTE:
            These lines are commented out intentionally.
            When fixed height/width are removed, the button
@@ -33,24 +45,28 @@ and how transitions and pseudo-classes affect interaction.
         width: 62px;
         */
 
-        /* ==============================================
+      /* ==============================================
            TRANSITIONS:
            These ensure a smooth change in color when hovering.
            background-color and text color both transition over 1 second.
         ================================================= */
-        transition: background-color 1s, color 1s;
+      transition: background-color 1s, color 1s;
 
-        /* ==============================================
+      /* ==============================================
            PADDING:
            Padding adds internal space between text and border.
            This increases clickable area and makes the button look balanced.
         ================================================= */
-        padding-left: 20px;                      /* Adds space on the left side */
-        padding-top: 20px;                       /* Adds space on the top */
-        padding-bottom: 20px;                    /* Adds space on the bottom */
-        padding-right: 20px;                     /* Adds space on the right */
+      padding-left: 20px;
+      /* Adds space on the left side */
+      padding-top: 20px;
+      /* Adds space on the top */
+      padding-bottom: 20px;
+      /* Adds space on the bottom */
+      padding-right: 20px;
+      /* Adds space on the right */
 
-        /* Alternative shorthand (equivalent to the four lines above):
+      /* Alternative shorthand (equivalent to the four lines above):
            padding: 20px;
         */
     }
@@ -59,30 +75,38 @@ and how transitions and pseudo-classes affect interaction.
        HOVER EFFECT
        ======================= */
     .join-button:hover {
-        background-color: rgb(41, 118, 211);     /* Button fills with blue */
-        color: white;                            /* Text becomes white */
-        /* Transitions for both color and background changes */
-        transition: background-color 1s, color 1s;
+      background-color: rgb(41, 118, 211);
+      /* Button fills with blue */
+      color: white;
+      /* Text becomes white */
+      /* Transitions for both color and background changes */
+      transition: background-color 1s, color 1s;
     }
 
     /* =======================
        ACTIVE EFFECT
        ======================= */
     .join-button:active {
-        opacity: 0.5;                            /* Slightly fades while pressed */
+      opacity: 0.5;
+      /* Slightly fades while pressed */
     }
+  </style>
+</head>
 
-</style>
+<body>
 
-
-<!-- =======================
+  <!-- =======================
      BUTTON ELEMENT
      ======================= -->
-<!--
+  <!--
 NOTE:
 If the button text length increases (like "JOIN MY CHANNEL"),
 the button expands automatically to fit it properly.
 No text overflow occurs since height and width are flexible.
 -->
 
-<button class="join-button">JOIN MY CHANNEL</button>
+  <button class="join-button">JOIN MY CHANNEL</button>
+
+</body>
+
+</html>

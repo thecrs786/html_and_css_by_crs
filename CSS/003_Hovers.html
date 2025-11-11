@@ -1,4 +1,8 @@
-<!-- =====================================================
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- =====================================================
      ✨ CSS HOVER & ACTIVE PSEUDO-CLASSES — COMPLETE NOTES ✨
      =====================================================
 
@@ -6,9 +10,10 @@ This code demonstrates how pseudo-classes like `:hover` and `:active`
 allow us to change the appearance of elements dynamically 
 based on user interaction (mouse hover or click).
 -->
-
-<style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hovers</title>
+  <style>
     /* =====================================================
        SUBSCRIBE BUTTON — BASE STYLE
        =====================================================
@@ -17,15 +22,23 @@ based on user interaction (mouse hover or click).
        The base (default) style defines how the button looks normally,
        i.e., before any user interaction occurs.
     */
-    .subscribe-button { 
-        background-color: rgb(200, 0, 0); /* Red background */
-        color: white;                     /* White text */
-        border: none;                     /* Removes default border */
-        height: 36px;                     /* Fixed height */
-        width: 105px;                     /* Fixed width */
-        border-radius: 2px;               /* Slightly rounded corners */
-        cursor: pointer;                  /* Changes cursor to pointer (hand icon) */
-        margin-right: 8px;                /* Adds spacing to the right */
+    .subscribe-button {
+      background-color: rgb(200, 0, 0);
+      /* Red background */
+      color: white;
+      /* White text */
+      border: none;
+      /* Removes default border */
+      height: 36px;
+      /* Fixed height */
+      width: 105px;
+      /* Fixed width */
+      border-radius: 2px;
+      /* Slightly rounded corners */
+      cursor: pointer;
+      /* Changes cursor to pointer (hand icon) */
+      margin-right: 8px;
+      /* Adds spacing to the right */
     }
 
     /* =====================================================
@@ -42,8 +55,9 @@ based on user interaction (mouse hover or click).
        Example: opacity, color, background, transform, etc.
     */
     .subscribe-button:hover {
-        opacity: 0.5; /* Fades the button to 50% opacity on hover */
-        /* background-color: green;  (You can test this line to see hover color change) */
+      opacity: 0.5;
+      /* Fades the button to 50% opacity on hover */
+      /* background-color: green;  (You can test this line to see hover color change) */
     }
 
     /* =====================================================
@@ -59,8 +73,10 @@ based on user interaction (mouse hover or click).
        Below: Restores full opacity and turns background blue when clicked.
     */
     .subscribe-button:active {
-        background-color: blue; /* Turns blue while being clicked */
-        opacity: 1; /* Full opacity (overrides hover's fade-out) */
+      background-color: blue;
+      /* Turns blue while being clicked */
+      opacity: 1;
+      /* Full opacity (overrides hover's fade-out) */
     }
 
 
@@ -73,16 +89,25 @@ based on user interaction (mouse hover or click).
        Demonstrates how border properties differ from background-color.
     */
     .join-button {
-        background-color: white;                /* White background */
-        color: rgb(41, 118, 211);               /* Blue text */
-        border-color: rgb(41, 118, 211);        /* Blue border */
-        border-style: solid;                    /* Solid border type */
-        border-width: 1px;                      /* Thin border */
-        border-radius: 2px;                     /* Slightly rounded edges */
-        cursor: pointer;                        /* Pointer on hover */
-        height: 36px;                           /* Fixed height */
-        width: 62px;                            /* Fixed width */
-        /* margin-right intentionally skipped (will align with tweet button later) */
+      background-color: white;
+      /* White background */
+      color: rgb(41, 118, 211);
+      /* Blue text */
+      border-color: rgb(41, 118, 211);
+      /* Blue border */
+      border-style: solid;
+      /* Solid border type */
+      border-width: 1px;
+      /* Thin border */
+      border-radius: 2px;
+      /* Slightly rounded edges */
+      cursor: pointer;
+      /* Pointer on hover */
+      height: 36px;
+      /* Fixed height */
+      width: 62px;
+      /* Fixed width */
+      /* margin-right intentionally skipped (will align with tweet button later) */
     }
 
     /* =====================================================
@@ -92,8 +117,10 @@ based on user interaction (mouse hover or click).
        - White text on blue background gives a clear interactive effect.
     */
     .join-button:hover {
-        background-color: rgb(41, 118, 211);    /* Turns background blue */
-        color: white;                           /* Turns text white */
+      background-color: rgb(41, 118, 211);
+      /* Turns background blue */
+      color: white;
+      /* Turns text white */
     }
 
     /* =====================================================
@@ -103,22 +130,23 @@ based on user interaction (mouse hover or click).
        - Reduces opacity while button is being clicked.
     */
     .join-button:active {
-        opacity: 0.5; /* Slightly fades when pressed */
+      opacity: 0.5;
+      /* Slightly fades when pressed */
     }
+  </style>
+</head>
 
-</style>
+<body>
 
-
-
-<!-- =====================================================
+  <!-- =====================================================
      BUTTONS DISPLAYED ON PAGE
      ===================================================== -->
-<button class="subscribe-button">SUBSCRIBE</button>
-<button class="join-button">JOIN</button>
+  <button class="subscribe-button">SUBSCRIBE</button>
+  <button class="join-button">JOIN</button>
 
 
 
-<!-- =====================================================
+  <!-- =====================================================
      🎯 CONCEPT SUMMARY: HOVER vs ACTIVE
      =====================================================
 
@@ -157,3 +185,6 @@ based on user interaction (mouse hover or click).
 
 =========================================================
 -->
+</body>
+
+</html>
