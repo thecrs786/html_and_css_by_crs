@@ -1,38 +1,88 @@
-    <Style>
+<!-- =======================================
+     BUTTON AUTO-SIZING & PADDING CONCEPTS
+     ======================================= -->
+<!--
+This code shows how removing fixed height and width allows a button
+to resize dynamically based on its text content.
+It also explains how padding increases internal spacing
+and how transitions and pseudo-classes affect interaction.
+-->
 
-    .join-button{
-        background-color: white;
-        color: rgb(41, 118, 211);
-        border-color: rgb(41, 118, 211);
-        border-style: solid; 
-        border-width: 1px;
-        border-radius: 2px;
-        cursor: pointer;
-        /*height: 36px; if we comment out these two lines, the button size will arrange itself
-        width: 62px;    according to the text length */
-        transition: background-color 1s,
-        color 1s;
-        /* Padding adds space inside the button*/
-        padding-left: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-right: 20px;
+<style>
 
-        /* padding: 20px; # sets padding to all 4 sides*/
-       }
+    /* =======================
+       JOIN BUTTON STYLING
+       ======================= */
+    .join-button {
+        background-color: white;                 /* Default background */
+        color: rgb(41, 118, 211);                /* Text color (blue tone) */
+        border-color: rgb(41, 118, 211);         /* Blue border color */
+        border-style: solid;                     /* Solid border line */
+        border-width: 1px;                       /* Thin border */
+        border-radius: 2px;                      /* Slightly rounded corners */
+        cursor: pointer;                         /* Pointer cursor on hover */
 
-    .join-button:hover{
-        background-color: rgb(41, 118, 211);
-        color: white;
-        transition: background-color 1s, color 1s; 
+        /* ==============================================
+           HEIGHT & WIDTH NOTE:
+           These lines are commented out intentionally.
+           When fixed height/width are removed, the button
+           automatically adjusts its size based on content.
+           If they were enabled, text overflow could occur.
+        =================================================
+        height: 36px;
+        width: 62px;
+        */
+
+        /* ==============================================
+           TRANSITIONS:
+           These ensure a smooth change in color when hovering.
+           background-color and text color both transition over 1 second.
+        ================================================= */
+        transition: background-color 1s, color 1s;
+
+        /* ==============================================
+           PADDING:
+           Padding adds internal space between text and border.
+           This increases clickable area and makes the button look balanced.
+        ================================================= */
+        padding-left: 20px;                      /* Adds space on the left side */
+        padding-top: 20px;                       /* Adds space on the top */
+        padding-bottom: 20px;                    /* Adds space on the bottom */
+        padding-right: 20px;                     /* Adds space on the right */
+
+        /* Alternative shorthand (equivalent to the four lines above):
+           padding: 20px;
+        */
     }
 
-    .join-button:active{
-        opacity:0.5;
+    /* =======================
+       HOVER EFFECT
+       ======================= */
+    .join-button:hover {
+        background-color: rgb(41, 118, 211);     /* Button fills with blue */
+        color: white;                            /* Text becomes white */
+        /* Transitions for both color and background changes */
+        transition: background-color 1s, color 1s;
     }
 
-    </Style>
+    /* =======================
+       ACTIVE EFFECT
+       ======================= */
+    .join-button:active {
+        opacity: 0.5;                            /* Slightly fades while pressed */
+    }
 
-<!-- If we fix the box length and width, this leads to overflow of the text outside the box whenever the content exceeds the size -->
+</style>
+
+
+<!-- =======================
+     BUTTON ELEMENT
+     ======================= -->
+<!--
+NOTE:
+If the button text length increases (like "JOIN MY CHANNEL"),
+the button expands automatically to fit it properly.
+No text overflow occurs since height and width are flexible.
+-->
 
 <button class="join-button">JOIN MY CHANNEL</button>

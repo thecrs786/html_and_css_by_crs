@@ -1,65 +1,97 @@
-<!--
-    There are 3 ways to use css
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Introduction</title>
 
-    1. Internal CSS(inside <style> tag in HTML)
-    2. External CSS file
-    3. Inline CSS (using style attribute)
+  <!-- 
+  ============================================================
+                      INTRO TO CSS IN HTML
+  ============================================================
+  There are 3 main ways to apply CSS:
+  
+  1. INTERNAL CSS → Written inside the <style> tag in HTML (recommended for small projects)
+  2. EXTERNAL CSS → Written in a separate .css file and linked using <link>
+  3. INLINE CSS   → Written directly inside an element using the style attribute
 
-    NOTE: InInternal or external CSS we use /**/ for comments
--->
-<!-- style is a html attribute-->
+  NOTES:
+  - In INTERNAL or EXTERNAL CSS, comments are written using /* comment */
+  - In HTML, attributes like "style" are written directly inside a tag.
+  ============================================================
+  -->
+</head>
 
- <!--  1. INLINE-->
+<body>
+  <!-- ============================= -->
+  <!-- 1️⃣ INLINE CSS EXAMPLE -->
+  <!-- ============================= -->
+  <!-- Inline CSS applies style directly to this element only -->
+  <h1 style="color: blue;">Hello</h1>
 
-<h1 style="color: blue;",>Hello</h1>
 
-<!-- 2. INTERNAL -->
+  <!-- ============================= -->
+  <!-- 2️⃣ INTERNAL CSS EXAMPLE -->
+  <!-- ============================= -->
+  <!-- Technique:
+       1. Create elements with HTML.
+       2. Style them using CSS selectors (inside <style>).
+  -->
+  <style>
+    /* The 'button' selector targets ALL <button> elements on this page */
+    button { 
+      background-color: red;     /* Sets red background */
+      color: white;              /* Sets white text color */
 
-<!--
-      Technique: 1. Create element with HTML
-                 2. Style with CSS one-by-one
--->
-<style>
-  button { /*For all buttons on this page*/
-    background-color: red; /*TO adjust background color*/
-
-    color: white; /*To adjust text color*/
-    /*or instead of white use: rgb(255, 255, 255)*/
-    /* we can use rgb(red value, green value, blue value) as well for colors in css
-      minimum value : 0
-      maximum value: 255
+      /* Alternate color method using RGB:
+         rgb(red, green, blue)
+         - Minimum value: 0
+         - Maximum value: 255
+         Example: rgb(255, 255, 255) → white
       */
-    border: none; /*To make the button borderless*/
 
-    /*To adjust height and width*/
-    height: 36px;
-    width: 105px;
+      border: none;              /* Removes default border */
 
-    /*To adjust border radius : takes pixels measurement
-                                higher the pixels, more round the corners*/
+      height: 36px;              /* Fixed height */
+      width: 105px;              /* Fixed width */
 
-    border-radius: 100px;
+      border-radius: 100px;      /* Makes the corners fully rounded 
+                                    (half of height → pill shape) */
 
-    /*To change cursor when pointed on the button*/
-   
-    cursor: pointer;
-  }
-</style>
+      cursor: pointer;           /* Changes cursor to a pointer on hover */
+    }
+  </style>
 
-<!-- CSS SLELCTOR 
-        we selected button , means every button would have background
-        color red and text color white and would be borderless
+  <!-- ============================= -->
+  <!-- Explanation of CSS Concepts -->
+  <!-- ============================= -->
+  <!-- 
+  CSS SELECTOR: 
+      - 'button' is the selector here → targets all <button> elements.
+  CSS PROPERTY:
+      - background-color, color, border, height, etc.
+  CSS VALUE:
+      - red, white, none, etc.
+  RULE FORMAT:
+      property: value;
+      (each rule ends with a semicolon)
+  -->
 
-        CSS Property : background-color, color, border, height, etc.
-        CSS Value : red, white, etc.
+  <!-- ============================= -->
+  <!-- BUTTON ELEMENTS -->
+  <!-- ============================= -->
 
-        In CSS we end a style with a semicolon ;
--->
+  <!-- First button -->
+  <button>SUBSCRIBE</button> 
+  <!-- This button will have:
+       - Red background
+       - White text
+       - Borderless style
+       - Rounded corners
+  -->
 
-<button>SUBSCRIBE</button> <!--It's background would be red in color
-                                and text would be white in color
-                                and button woul dbe borderless-->
-
-<!-- Creating another button-->
-
-<button>JOIN</button> <!--Unfortunately this button has also the same attributes as the above one-->
+  <!-- Second button -->
+  <button>JOIN</button> 
+  <!-- This button inherits the same styles since the selector targets ALL buttons -->
+</body>
+</html>

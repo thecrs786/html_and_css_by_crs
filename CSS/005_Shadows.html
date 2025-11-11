@@ -1,81 +1,124 @@
+<!-- =======================
+     BUTTON STYLES PRACTICE
+     ======================= -->
+<!-- Demonstration of three styled buttons:
+     1. Subscribe Button
+     2. Join Button
+     3. Tweet Button
+     Each button includes hover, active, and transition effects.
+-->
+
 <style>
-    .subscribe-button{ 
-        background-color: rgb(200, 0, 0);
-        color: white;
-        border: none;
-        height: 36px;
-        width: 105px;
-        border-radius: 2px;
-        cursor: pointer;
-        margin-right: 8px;
-        transition: opacity 1s
+
+    /* =======================
+       SUBSCRIBE BUTTON STYLE
+       ======================= */
+    .subscribe-button { 
+        background-color: rgb(200, 0, 0); /* YouTube-like red color */
+        color: white;                     /* Text color */
+        border: none;                     /* No border */
+        height: 36px;                     /* Button height */
+        width: 105px;                     /* Button width */
+        border-radius: 2px;               /* Slightly rounded corners */
+        cursor: pointer;                  /* Pointer cursor on hover */
+        margin-right: 8px;                /* Spacing to the right */
+        transition: opacity 1s;           /* Smooth opacity change on hover or active */
     }
+
+    /* Hover effect: fades the button */
     .subscribe-button:hover { 
-        opacity: 0.5; 
-
-    }
-    .subscribe-button:active{ 
-        background-color: blue;
-        opacity: 1; 
-    }
-    .join-button{
-        background-color: white;
-        color: rgb(41, 118, 211);
-        border-color: rgb(41, 118, 211);
-        border-style: solid; 
-        border-width: 1px;
-        border-radius: 2px;
-        cursor: pointer;
-        height: 36px;
-        width: 62px;
-        transition: background-color 1s, /*remove this line from here and let this
-                                         line stay in hover to see only hover in transition*/
-        color 1s;
-       }
-
-    .join-button:hover{
-        background-color: rgb(41, 118, 211);
-        color: white;
-        transition: background-color 1s, color 1s; 
+        opacity: 0.5;                     /* Makes it look dimmer */
     }
 
-    .join-button:active{
-        opacity:0.5;
+    /* Active effect: when clicked */
+    .subscribe-button:active { 
+        background-color: blue;           /* Changes to blue while clicked */
+        opacity: 1;                       /* Fully opaque again */
     }
 
-    .tweet-button{
-        background-color: rgb(2, 158, 255);
-        color: white;
-        border: none;
-        height: 36px;
-        width: 70px;
-        border-radius: 18px;
-        font-weight: bold;
-        font-size: 15px;
-        cursor: pointer;
-        margin-left: 8px;
 
-        /*Creating Shadows*/
-
-        /* rgba : same as rgb but a denotes the opacity*/
-
-        /*box-shadow: 10px 10px 10px red;
-                  horizontal_position vertical_posotion blur_in_px color*/
-    
-        /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); /*For creating a less opaque shadow*/
-
-        transition: box-shadow 1s; /*For both hover-in and hover-out transition*/
-
+    /* =======================
+       JOIN BUTTON STYLE
+       ======================= */
+    .join-button {
+        background-color: white;                /* Default white background */
+        color: rgb(41, 118, 211);               /* Blue text color */
+        border-color: rgb(41, 118, 211);        /* Same blue for border */
+        border-style: solid;                    /* Solid border */
+        border-width: 1px;                      /* Thin border */
+        border-radius: 2px;                     /* Slightly rounded edges */
+        cursor: pointer;                        /* Pointer cursor */
+        height: 36px;                           /* Fixed height */
+        width: 62px;                            /* Fixed width */
+        /* 
+           Transition is applied to color change 
+           (we moved background-color transition to hover 
+           to see only hover-in animation effect)
+        */
+        transition: color 1s;
     }
 
+    /* Hover effect for JOIN */
+    .join-button:hover {
+        background-color: rgb(41, 118, 211);    /* Fills with blue */
+        color: white;                           /* Text turns white */
+        transition: background-color 1s, color 1s; /* Smooth fade during hover-in */
+    }
+
+    /* Active state (when pressed) */
+    .join-button:active {
+        opacity: 0.5;                           /* Button slightly fades when clicked */
+    }
+
+
+    /* =======================
+       TWEET BUTTON STYLE
+       ======================= */
+    .tweet-button {
+        background-color: rgb(2, 158, 255);     /* Twitter blue */
+        color: white;                           /* White text */
+        border: none;                           /* No border */
+        height: 36px;                           /* Height */
+        width: 70px;                            /* Width */
+        border-radius: 18px;                    /* Fully rounded for pill shape */
+        font-weight: bold;                      /* Bold text */
+        font-size: 15px;                        /* Slightly larger font */
+        cursor: pointer;                        /* Pointer cursor */
+        margin-left: 8px;                       /* Spacing on the left */
+
+        /* =========================
+           SHADOW CREATION EXAMPLES
+           =========================
+           box-shadow syntax:
+           box-shadow: horizontal vertical blur color;
+           rgba() allows opacity control in color.
+        */
+
+        /* Uncomment this line to see full red shadow:
+           box-shadow: 10px 10px 10px red;
+        */
+
+        /* Uncomment this for opaque black shadow:
+           box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+        */
+
+        /* Transition for shadow on hover and hover-out */
+        transition: box-shadow 1s;
+    }
+
+    /* Hover effect: activates shadow */
     .tweet-button:hover {
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
-        /*if we want only hover in transition and not hover out transition
-         remove transition: shadow-box 1s; from normal state and add it here*/
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 1); /* Soft shadow around button */
+        /* If you want shadow to appear instantly but fade out slowly,
+           remove the transition from .tweet-button and put it only here */
     }
 
 </style>
 
+
+<!-- =======================
+     BUTTON ELEMENTS
+     ======================= -->
 <button class="subscribe-button">SUBSCRIBE</button>
 <button class="join-button">JOIN</button>
 <button class="tweet-button">Tweet</button>

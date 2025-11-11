@@ -1,62 +1,66 @@
-<!-- Targeting specefic buttons only
-        ->we use class
-        starting with a dot '.'
-        -->
+    <!-- 
+        Targeting specific buttons using CLASS SELECTORS
+        - Classes are defined in CSS with a dot (.)
+        - Each button below has a unique class
+    -->
+    <style>
+        /* NOTE:
+           1. In CSS, space outside the element is called 'margin'.
+           2. For perfectly rounded corners, set border-radius to half of the smaller of height or width.
+        */
 
-<!--
-    NOTE: 1.In CSS space is called margin   
-          2. To get perfectly rounded corners, set the border-radius to half of the minimum of the height and width   
--->
+        /* ==============================
+           SUBSCRIBE BUTTON
+           ============================== */
+        .subscribe-button {
+            background-color: rgb(200, 0, 0); /* Red background */
+            color: white;                     /* White text */
+            border: none;                     /* No border */
+            height: 36px;                     /* Fixed height */
+            width: 105px;                     /* Fixed width */
+            border-radius: 2px;               /* Slightly rounded corners */
+            cursor: pointer;                  /* Pointer cursor on hover */
+            margin-right: 8px;                /* Space to the right */
+        }
 
-<style>
+        /* ==============================
+           JOIN BUTTON
+           ============================== */
+        .join-button {
+            background-color: white;                  /* White background */
+            color: rgb(41, 118, 211);                 /* Blue text */
+            border-color: rgb(41, 118, 211);          /* Blue border */
+            border-style: solid;                      /* Solid border line */
+            border-width: 1px;                        /* Thin border */
+            border-radius: 2px;                       /* Slightly rounded edges */
+            cursor: pointer;                          /* Pointer cursor */
+            height: 36px;                             /* Fixed height */
+            width: 62px;                              /* Fixed width */
+            /* margin-right: 8px;  (optional) */
+        }
 
-    /*For subscribe button*/
-    .subscribe-button{ /* started with a dot '.' and enter class name to target it*/
-        background-color: rgb(200, 0, 0);
-        color: white;
-        border: none;
-        height: 36px;
-        width: 105px;
-        border-radius: 2px;
-        cursor: pointer;
-        margin-right: 8px; /*Created space on the right of this button*/
-    }
+        /* ==============================
+           TWEET BUTTON
+           ============================== */
+        .tweet-button {
+            background-color: rgb(2, 158, 255); /* Bright blue background */
+            color: white;                        /* White text */
+            border: none;                        /* No border */
+            height: 36px;                        /* Fixed height */
+            width: 70px;                         /* Fixed width */
+            border-radius: 18px;                 /* Rounded shape (half of height) */
+            font-weight: bold;                   /* Bold text */
+            font-size: 15px;                     /* Medium font size */
+            cursor: pointer;                     /* Pointer cursor */
+            margin-left: 8px;                    /* Space on the left */
+        }
+    </style>
 
-    /*For join button*/
-    .join-button{
-        background-color: white;
-        color: rgb(41, 118, 211);
-        border-color: rgb(41, 118, 211); /*For background color*/
-        border-style: solid; /*For border style*/
-        border-width: 1px;
-        border-radius: 2px;
-        cursor: pointer;
-        height: 36px;
-        width: 62px;
-        /* margin-right: 8px; we'll use left margin on tweet button*/
-    }
+    <!-- 
+        Each button below uses its respective class defined in CSS.
+        These class names allow each button to have a unique style.
+    -->
+    <button class="subscribe-button">SUBSCRIBE</button>
+    <button class="join-button">JOIN</button>
+    <button class="tweet-button">Tweet</button>
 
-    /*For Tweet Button*/
-    .tweet-button{
-        background-color: rgb(2, 158, 255);
-        color: white;
-        border: none;
-        height: 36px;
-        width: 70px;
-        border-radius: 18px;
-        font-weight: bold; /*Bolded the font*/
-        font-size: 15px; /*Adjusted font size*/
-        cursor: pointer;
-        margin-left: 8px;
-        
-    
-
-    }
-
-</style>
-
-<button class="subscribe-button">SUBSCRIBE</button> <!--Derived only class attributes-->
-
-<button class="join-button">JOIN</button>
-
-<button class="tweet-button">Tweet</button>

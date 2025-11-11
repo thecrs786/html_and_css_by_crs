@@ -1,57 +1,159 @@
+<!-- =====================================================
+     ✨ CSS HOVER & ACTIVE PSEUDO-CLASSES — COMPLETE NOTES ✨
+     =====================================================
+
+This code demonstrates how pseudo-classes like `:hover` and `:active`
+allow us to change the appearance of elements dynamically 
+based on user interaction (mouse hover or click).
+-->
+
 <style>
-    .subscribe-button{ 
-        background-color: rgb(200, 0, 0);
-        color: white;
-        border: none;
-        height: 36px;
-        width: 105px;
-        border-radius: 2px;
-        cursor: pointer;
-        margin-right: 8px;
+
+    /* =====================================================
+       SUBSCRIBE BUTTON — BASE STYLE
+       =====================================================
+
+       Here we create a red rectangular button with white text.
+       The base (default) style defines how the button looks normally,
+       i.e., before any user interaction occurs.
+    */
+    .subscribe-button { 
+        background-color: rgb(200, 0, 0); /* Red background */
+        color: white;                     /* White text */
+        border: none;                     /* Removes default border */
+        height: 36px;                     /* Fixed height */
+        width: 105px;                     /* Fixed width */
+        border-radius: 2px;               /* Slightly rounded corners */
+        cursor: pointer;                  /* Changes cursor to pointer (hand icon) */
+        margin-right: 8px;                /* Adds spacing to the right */
     }
 
-    /* Creating hover [PSEUDO CLASS] 
-    Triggered when mouse is over the element*/
+    /* =====================================================
+       :HOVER PSEUDO-CLASS
+       =====================================================
+       The :hover pseudo-class triggers when the mouse pointer 
+       is placed *over* an element.
 
-    .subscribe-button:hover { /* These styles would apply in addition to above styles when we're hovering over the button
-                                 If any exists above, these ones would take effect while hovering*/
-        opacity: 0.5; /*To fade out the element, range to 1*/
-        /*background-color: green;*/
+       - It allows temporary style changes while hovering.
+       - It is used for interactivity and feedback (visual cue).
+       - Styles in :hover are applied *in addition to* base styles,
+         but if any property conflicts, the :hover property overrides.
 
+       Example: opacity, color, background, transform, etc.
+    */
+    .subscribe-button:hover {
+        opacity: 0.5; /* Fades the button to 50% opacity on hover */
+        /* background-color: green;  (You can test this line to see hover color change) */
     }
 
-    /*Active pseudo class*/
-    .subscribe-button:active{ /* Triggered while mouse is clicked/pressed*/
-        background-color: blue;
-        opacity: 1; /*in hover, opacity reduced so when clicked the button would turn blue but faded,
-                        but here we restored the opacity, now button will turn blue with full opacity*/
+    /* =====================================================
+       :ACTIVE PSEUDO-CLASS
+       =====================================================
+       The :active pseudo-class triggers *only while* 
+       the mouse button is pressed down (clicked) on the element.
+
+       - It typically lasts for a fraction of a second (click duration).
+       - Commonly used to simulate "button press" or click feedback.
+       - Overrides both base and hover styles while active.
+
+       Below: Restores full opacity and turns background blue when clicked.
+    */
+    .subscribe-button:active {
+        background-color: blue; /* Turns blue while being clicked */
+        opacity: 1; /* Full opacity (overrides hover's fade-out) */
     }
 
-    .join-button{
-        background-color: white;
-        color: rgb(41, 118, 211);
-        border-color: rgb(41, 118, 211); /*For background color*/
-        border-style: solid; /*For border style*/
-        border-width: 1px;
-        border-radius: 2px;
-        cursor: pointer;
-        height: 36px;
-        width: 62px;
-        /* margin-right: 8px; we'll use left margin on tweet button*/
+
+
+    /* =====================================================
+       JOIN BUTTON — BASE STYLE
+       =====================================================
+
+       Here we create a bordered blue button with white background.
+       Demonstrates how border properties differ from background-color.
+    */
+    .join-button {
+        background-color: white;                /* White background */
+        color: rgb(41, 118, 211);               /* Blue text */
+        border-color: rgb(41, 118, 211);        /* Blue border */
+        border-style: solid;                    /* Solid border type */
+        border-width: 1px;                      /* Thin border */
+        border-radius: 2px;                     /* Slightly rounded edges */
+        cursor: pointer;                        /* Pointer on hover */
+        height: 36px;                           /* Fixed height */
+        width: 62px;                            /* Fixed width */
+        /* margin-right intentionally skipped (will align with tweet button later) */
     }
 
-    /*colon hover*/
-
-    .join-button:hover{
-        background-color: rgb(41, 118, 211);
-        color: white;
+    /* =====================================================
+       JOIN BUTTON :HOVER
+       =====================================================
+       - When hovered, invert the color scheme.
+       - White text on blue background gives a clear interactive effect.
+    */
+    .join-button:hover {
+        background-color: rgb(41, 118, 211);    /* Turns background blue */
+        color: white;                           /* Turns text white */
     }
 
-    /*Fade when clicked*/
-    .join-button:active{
-        opacity:0.5;
+    /* =====================================================
+       JOIN BUTTON :ACTIVE
+       =====================================================
+       - Adds a temporary click feedback.
+       - Reduces opacity while button is being clicked.
+    */
+    .join-button:active {
+        opacity: 0.5; /* Slightly fades when pressed */
     }
+
 </style>
 
+
+
+<!-- =====================================================
+     BUTTONS DISPLAYED ON PAGE
+     ===================================================== -->
 <button class="subscribe-button">SUBSCRIBE</button>
 <button class="join-button">JOIN</button>
+
+
+
+<!-- =====================================================
+     🎯 CONCEPT SUMMARY: HOVER vs ACTIVE
+     =====================================================
+
+1. :hover — “Mouse Over” Interaction
+   ---------------------------------
+   ➤ Triggered when the user places the cursor over an element.
+   ➤ Remains active *as long as* the mouse is on that element.
+   ➤ Used for effects like color change, opacity change, underline, shadow, etc.
+   ➤ Example: Button glows, link highlights, image brightens, etc.
+
+   Key Notes:
+   - :hover overrides normal state but not :active.
+   - It’s ideal for user feedback before interaction (pre-click).
+
+2. :active — “Click Press” Interaction
+   -----------------------------------
+   ➤ Triggered only *while* the element is being clicked (mouse held down).
+   ➤ Ends immediately when the mouse is released.
+   ➤ Commonly used to simulate physical button pressing or highlight state.
+   ➤ Example: Button darkens when clicked.
+
+   Key Notes:
+   - :active overrides both normal and hover states temporarily.
+   - It can combine with transitions for smooth animations.
+
+3. Interaction Order (CSS Priority):
+   ---------------------------------
+   Normal State  →  Hover  →  Active
+   (Each new state overrides the previous one while active.)
+
+4. Practical Design Tip:
+   ---------------------------------
+   - Use :hover for interactivity feedback.
+   - Use :active for click feedback.
+   - Use transition for smooth changes between them.
+
+=========================================================
+-->

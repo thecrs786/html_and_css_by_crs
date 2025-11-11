@@ -1,0 +1,181 @@
+<!-- ====================== STYLE SECTION ====================== -->
+<style>
+
+/* ============================================================
+   1️⃣ GLOBAL ELEMENT STYLING
+   ------------------------------------------------------------
+   These properties apply to ALL <p> elements by default.
+   If a specific class (like .video-title) defines a property
+   differently, that class will override the global value.
+   ============================================================ */
+p {
+    /*Every paragraph initially follows these base styles.
+      If any class modifies a property, that class’s rule
+      takes priority for elements using that class.*/
+
+    font-family: Arial; /*Applied to all paragraphs*/
+    margin-top: 0;
+    margin-bottom: 0;
+    /*Top and bottom margins are set to 0 globally,
+      but classes can override them individually.*/
+}
+
+
+/* ============================================================
+   2️⃣ SHARED CLASS STYLING
+   ------------------------------------------------------------
+   These classes (.video-stats, .video-author, .video-description)
+   share common font and color properties. This prevents code repetition.
+   ============================================================ */
+.video-stats, .video-author, .video-description {
+    color: rgb(96, 96, 96); /*Shared text color*/
+    font-size: 14px;        /*Shared font size*/
+}
+
+
+/* ============================================================
+   3️⃣ INDIVIDUAL CLASS STYLING
+   ------------------------------------------------------------
+   These rules apply to each class separately. They can override
+   global <p> properties and even shared properties if defined again.
+   ============================================================ */
+
+/* ----- (a) VIDEO TITLE ----- */
+.video-title {
+
+    /* font-family: Arial; 
+       (Not needed, already applied globally) */
+
+    font-size: 18px;         /*Overrides shared or global size*/
+    width: 280px;            /*Forces wrapping to next line*/
+    font-weight: bold;       /*Makes it bold*/
+    font-style: normal;      /*Ensures normal (not italic)*/
+    text-align:center;      /*Centers text horizontally*/
+    line-height: 24px;       /*Controls line spacing*/
+
+    /*NOTE: Paragraphs have default top/bottom margins.
+      We customized only bottom here.*/
+    margin-bottom: 5px;      /*Overrides global margin*/
+}
+
+/* ----- (b) VIDEO STATS ----- */
+.video-stats {
+
+    /* font-size and color inherited from shared rule above */
+    margin-bottom: 20px; /*Overrides global margin*/
+}
+
+/* ----- (c) VIDEO AUTHOR ----- */
+.video-author {
+
+    /* font-size and color inherited from shared rule above */
+    margin-bottom: 20px; /*Overrides global margin*/
+}
+
+/* ----- (d) VIDEO DESCRIPTION ----- */
+.video-description {
+
+    /* font-size and color inherited from shared rule above */
+    width: 280px;       /*Forces wrapping of long lines*/
+    line-height: 22px;  /*Adjusts spacing between lines*/
+    margin-bottom: 100px;/*Overrides gobal margin*/
+
+}
+
+    /*TEXT ELEMENTS : exists inside the line of text and modifies the specefic part of text only
+
+    ex: <strong></strong> : bolds the text
+        <u></u> : underlines the text
+        <span></span> : the most generic text element, it has no style. we can style it ourselves by giving it class.
+    
+    */
+
+    .apple-text{
+        margin-bottom: 50px; /*Overrides global margin*/
+        /*font size would be 14px*/
+        background-color: rgb(227, 65, 64);/*Setting background color*/
+        color: white;/*Setting text color*/
+        text-align:center; /*Aligning text to the center*/
+        padding-top: 18px; /*Creating space inside the paragraph borders and text*/
+        padding-bottom: 18px;
+
+        /*CREATING UNDERLINED TEXT
+        text-decoration: underline; applies to whole paragraph
+                                    so, we used text element <span> while writing the paragraph
+                                    because: we want underline only on shop now part and only when we hover on*/
+
+
+    }
+
+    .span-example{/*We can create margins within texts as an alternative of using multiple spaces sice that doesn't work*/
+        margin-left:12px;
+        /*This is how we achieve multiple spaces between words*/
+    }
+
+    .span-example:hover{ /*We want underline only when we hover over the shop now part*/
+        text-decoration:underline; /*creating underline*/
+        cursor:pointer; /*Cursor changes to pointer when hovered over the shop now part*/
+    }
+
+    /*
+    IF WE WRITE THIS INSTEAD OF ABOVE TWO BLOCKS
+    .span-example {
+    text-decoration: underline;
+    cursor: pointer;
+    }
+    text-decoration: underline → will apply all the time (always underlined).
+
+    cursor: pointer → will still only show on hover, because that’s how browsers behave by default.
+    The cursor property means “use this cursor when hovered or interacting”, not “always display the cursor over everything.”
+    */
+
+
+</style>
+
+<!-- ====================== CONTENT SECTION ====================== -->
+
+<!-- HTML ENTITY NOTE:
+     HTML Entities let us type special characters.
+     For middle dot:   &#183;   (HTML) or  \00B7   (CSS)
+     For checkmark:    &#10003; or &#x2713; or &check; (HTML)
+-->
+
+<p class="video-title">
+    Talking tech and AI with Google CEO Sundar Pichai!
+</p>
+
+<p class="video-stats">
+    3.4M views &#183; 6 months ago
+</p>
+
+<p class="video-author">
+    Marques Brownlee &check;
+</p>
+
+<p class="video-description">
+    Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal
+    from Google's CEO. Shoutout to Sundar!
+</p>
+
+<!-- ====================== EXPLANATION SUMMARY ======================
+   🔹 p{}         → Global element selector (base styling for all <p>)
+   🔹 .video-*    → Class selectors (specific overrides)
+   🔹 Shared rule → Combines identical properties across multiple classes
+   🔹 Priority order (lowest to highest):
+       1. Element selector (p)
+       2. Shared class selector (.video-stats, .video-author, .video-description)
+       3. Individual class selector (.video-title, etc.)
+
+    🟡 PRIORITY ORDER
+   - Inline style (if any) > Class style > Element (default browser) style
+   - Hover/Active states override normal class temporarily.
+   =============================================================== -->
+
+<!--Whenever we have a greater than or less than sign, it's better to use an
+    HTML entity because it might be confused with html tag
+    
+    for greater than : &#62; -->
+<p class="apple-text">
+    Shop early for the best selection of holiday
+    favourites. <span class="span-example">Shop now &#62;</span><!--Used underline element-->
+</p>
